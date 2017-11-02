@@ -1,1 +1,1 @@
-# lalavel-broadcast-test
+# laravel-broadcast-test
