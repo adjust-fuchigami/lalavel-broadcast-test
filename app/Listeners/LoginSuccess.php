@@ -3,6 +3,7 @@
 namespace App\Listeners;
 
 use Illuminate\Auth\Events\Login as LoginEvent;
+use App\Events\BroadcastUserLogined;
 
 class LoginSuccess
 {
@@ -24,6 +25,7 @@ class LoginSuccess
      */
     public function handle(LoginEvent $event)
     {
+        broadcast(new BroadcastUserLogined($event->user));
     }
 
 }
