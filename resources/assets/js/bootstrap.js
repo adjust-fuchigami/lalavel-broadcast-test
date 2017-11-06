@@ -51,3 +51,13 @@ if (token) {
 //     broadcaster: 'pusher',
 //     key: 'your-pusher-key'
 // });
+
+import Echo from 'laravel-echo'
+import ioClient from 'socket.io-client'
+
+window.io = ioClient
+
+window.Echo = new Echo({
+    broadcaster: 'socket.io',
+    host: window.location.hostname + ':6001',
+});

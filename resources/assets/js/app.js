@@ -16,6 +16,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('message-component', require('./components/MessageComponent.vue'));
 
 const app = new Vue({
     el: '#app'

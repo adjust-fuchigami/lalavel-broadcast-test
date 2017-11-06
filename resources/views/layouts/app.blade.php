@@ -71,6 +71,10 @@
             </div>
         </nav>
 
+        @auth
+            <message-component user-id="{{auth()->user()->id}}"></message-component>
+        @endauth
+
         @yield('content')
     </div>
 
